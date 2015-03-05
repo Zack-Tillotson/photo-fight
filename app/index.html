@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="photoFightApp">
   <head>
     <title>Photo Fight! Taiwan Countryside vs Delicious Food</title>
-  </head>
-  <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="assets/photo-fight-v0.1.js"></script>
+    <script src="assets/application.js"></script>
+  </head>
+  <body ng-controller="PhotoFightCtlr">
+    <img width="200" height="200" ng-src="{{getCurrentImage()}}"/>
+    <a href="#" ng-click="incrementIndex(0)">Alpha</a>
+    <a href="#" ng-click="incrementIndex(1)">Bravo</a>
   </body>
 </html>
