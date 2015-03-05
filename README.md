@@ -1,13 +1,11 @@
 # Photo Fight
 Zack Tillotson
 
-Alpha/Beta photo contest framework, swipe left for more examples of group A and right for more B.
+Alpha/Beta photo contest appliction, swipe left for more examples of group A and right for more B.
 
 ## Usage
 
-1. Implement data source endpoints.
-2. On HTML page include Javascript library.
-3. On HTML page call $('<selector>').photoFight()
+1. Implement data source endpoints or hardcode into app/assets/data.json.
 
 ## Questions?
 

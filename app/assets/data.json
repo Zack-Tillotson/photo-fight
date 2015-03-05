@@ -1,0 +1,10 @@
+[
+  {
+    "name":"Taiwan Countryside", 
+    "images":["/assets/alpha/alpha1.jpg", "/assets/alpha/alpha2.jpg", "/assets/alpha/alpha3.jpg"]
+  }, 
+  {
+    "name":"Delicious Food",
+    "images":["/assets/beta/beta1.jpg", "/assets/beta/beta2.jpg", "/assets/beta/beta3.jpg"]
+  }
+]
