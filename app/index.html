@@ -12,7 +12,7 @@
   </head>
   <body ng-controller="PhotoFightCtlr">
     <header>
-      <h1><a href="">Zack And Tanya</a></h1>
+      <h1><a href="">{{data[0].name}} And {{data[1].name}}</a></h1>
     </header>
     <a class="left next-image" href="#" ng-click="incrementIndex(0)">
       <i class="fa fa-angle-left"></i>
@@ -28,8 +28,9 @@
     <footer>
       <div class="instruction">Swipe for another picture, left for {{data[0].name}} and right for {{data[1].name}}</div>
       <div class="nav-container">
-        <a href="directions/"><i class="fa fa-car"></i> Directions and Parking</a>
-        <a href="registries/"><i class="fa fa-gift"></i> Registries</a>
+        <a href="https://www.google.com/maps/place/Standard+Parking/@39.7485005,-104.9940255,18z/data=!4m2!3m1!1s0x876c78da6f95b189:0x44ec436a8feecb0e"><i class="fa fa-car"></i> Directions and Parking</a>
+        <a href="http://www.amazon.com/gp/registry/registry.html?type=wedding&id=32ZR5EUVU17DT&tag=wedch-994-20"><i class="fa fa-gift"></i> Amazon Registry</a>
+        <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=541848574&pwsurl="><i class="fa fa-gift"></i> Bed, Bath, and Beyond Registry</a>
       </div>
     </footer>
   </body>

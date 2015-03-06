@@ -20,6 +20,11 @@ var photoFightCtlr = photoFightApp.controller('PhotoFightCtlr', ['$scope', '$htt
     }
   ];
 
+  // Randomize order
+  if(Math.random() > .5) {
+    $scope.data.push($scope.data.shift());
+  }
+
   $scope.index = {
     set: Math.floor(Math.random()*2),
     sets: [0,0]
