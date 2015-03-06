@@ -11,11 +11,11 @@ var photoFightCtlr = photoFightApp.controller('PhotoFightCtlr', ['$scope', '$htt
   //});
   $scope.data = [
     {
-      "name":"Taiwan Countryside",
-      "images":["assets/alpha/alpha1.jpg", "assets/alpha/alpha2.jpg", "assets/alpha/alpha3.jpg"]
+      "name":"Tanya",
+      "images":["https://drive.google.com/thumbnail?id=0B0iGRSdhQ3rEYkF1Qk5WTUtmNWs&authuser=0&v=1425675915334&sz=w1682-h826", "assets/alpha/alpha2.jpg", "assets/alpha/alpha3.jpg"]
     },
     {
-      "name":"Delicious Food",
+      "name":"Zack",
       "images":["assets/beta/beta1.jpg", "assets/beta/beta2.jpg", "assets/beta/beta3.jpg"]
     }
   ];

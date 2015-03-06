@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html ng-app="photoFightApp">
   <head>
-    <title>Photo Fight! Taiwan Countryside vs Delicious Food</title>
+    <title>Zack And Tanya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="assets/application.js"></script>
+    <link rel="stylesheet" media="all" type="text/css" href="assets/style.css"></style>
+    <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
   <body ng-controller="PhotoFightCtlr">
-    <img width="200" height="200" ng-src="{{getCurrentImage()}}"/>
-    <a href="#" ng-click="incrementIndex(0)">Alpha</a>
-    <a href="#" ng-click="incrementIndex(1)">Bravo</a>
+    <header>
+      <h1><a href="">Zack And Tanya</a></h1>
+    </header>
+    <a class="left next-image" href="#" ng-click="incrementIndex(0)">
+      <i class="fa fa-angle-left"></i>
+      <div class="label">{{data[0].name}}</div>
+    </a>
+    <div id="main-pic-container">
+      <div id="main-pic" ng-style='{"background-image": "url("+getCurrentImage()+")"}'></div>
+    </div>
+    <a class="right next-image" href="#" ng-click="incrementIndex(1)">
+      <i class="fa fa-angle-right"></i>
+      <div class="label">{{data[1].name}}</div>
+    </a>
+    <footer>
+      <div class="instruction">Swipe for another picture, left for {{data[0].name}} and right for {{data[1].name}}</div>
+      <div class="nav-container">
+        <a href="directions/"><i class="fa fa-car"></i> Directions and Parking</a>
+        <a href="registries/"><i class="fa fa-gift"></i> Registries</a>
+      </div>
+    </footer>
   </body>
 </html>
