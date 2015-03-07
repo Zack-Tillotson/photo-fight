@@ -6,24 +6,20 @@ var photoFightApp = angular.module('photoFightApp', ['ngTouch']);
 
 var photoFightCtlr = photoFightApp.controller('PhotoFightCtlr', ['$scope', '$http', function($scope, $http) {
 
-  //$http.get('assets/data.json').success(function(data) {
-  //  $scope.data = data;
-  //});
-  $scope.data = [
-    {
-      "name":"Tanya",
-      "images":["https://drive.google.com/thumbnail?id=0B0iGRSdhQ3rEYkF1Qk5WTUtmNWs&authuser=0&v=1425675915334&sz=w1682-h826", "assets/alpha/alpha2.jpg", "assets/alpha/alpha3.jpg"]
-    },
-    {
-      "name":"Zack",
-      "images":["assets/beta/beta1.jpg", "assets/beta/beta2.jpg", "assets/beta/beta3.jpg"]
-    }
-  ];
+  $http.get('assets/data.json').success(function(data) {
 
-  // Randomize order
-  if(Math.random() > .5) {
-    $scope.data.push($scope.data.shift());
-  }
+    $scope.data = data;
+
+    // Randomize order
+    if(Math.random() > .5) {
+      $scope.data.push($scope.data.shift());
+    }
+
+    $scope.data[0].images.sort(function(a,b) { return Math.random() - .5; });
+    $scope.data[1].images.sort(function(a,b) { return Math.random() - .5; });
+
+  });
+
 
   $scope.index = {
     set: Math.floor(Math.random()*2),
