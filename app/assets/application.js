@@ -1,6 +1,6 @@
 // Modules
 
-var photoFightApp = angular.module('photoFightApp', []);
+var photoFightApp = angular.module('photoFightApp', ['ngTouch']);
 
 // Controllers
 

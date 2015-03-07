@@ -3,14 +3,15 @@
   <head>
     <title>Zack And Tanya</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-touch.js"></script>
     <script src="assets/application.js"></script>
     <link rel="stylesheet" media="all" type="text/css" href="assets/style.css"></style>
     <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
-  <body ng-controller="PhotoFightCtlr">
+  <body ng-controller="PhotoFightCtlr" ng-swipe-left="incrementIndex(0)" ng-swipe-right="incrementIndex(1)">
     <header>
       <div class="nav-container">
         <a href="https://www.google.com/maps/place/Standard+Parking/@39.7485005,-104.9940255,18z/data=!4m2!3m1!1s0x876c78da6f95b189:0x44ec436a8feecb0e"><i class="fa fa-car"></i> Parking</a>
