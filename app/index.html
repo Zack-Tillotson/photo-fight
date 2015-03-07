@@ -12,26 +12,28 @@
   </head>
   <body ng-controller="PhotoFightCtlr">
     <header>
-      <h1><a href="">{{data[0].name}} And {{data[1].name}}</a></h1>
+      <div class="nav-container">
+        <a href="https://www.google.com/maps/place/Standard+Parking/@39.7485005,-104.9940255,18z/data=!4m2!3m1!1s0x876c78da6f95b189:0x44ec436a8feecb0e"><i class="fa fa-car"></i> Parking</a>
+        <a href="http://www.amazon.com/gp/registry/registry.html?type=wedding&id=32ZR5EUVU17DT&tag=wedch-994-20"><i class="fa fa-gift"></i> Amazon Registry</a>
+        <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=541848574&pwsurl="><i class="fa fa-gift"></i> Bed, Bath, and Beyond Registry</a>
+      </div>
     </header>
     <a class="left next-image" href="#" ng-click="incrementIndex(0)">
       <i class="fa fa-angle-left"></i>
       <div class="label">{{data[0].name}}</div>
     </a>
     <div id="main-pic-container">
-      <div id="main-pic" ng-style='{"background-image": "url("+getCurrentImage()+")"}'></div>
+      <a href="{{getCurrentImage()}}">
+        <div id="main-pic" ng-style='{"background-image": "url("+getCurrentImage()+")"}'></div>
+      </a>
     </div>
     <a class="right next-image" href="#" ng-click="incrementIndex(1)">
       <i class="fa fa-angle-right"></i>
       <div class="label">{{data[1].name}}</div>
     </a>
     <footer>
-      <div class="instruction">Swipe for another picture, left for {{data[0].name}} and right for {{data[1].name}}</div>
-      <div class="nav-container">
-        <a href="https://www.google.com/maps/place/Standard+Parking/@39.7485005,-104.9940255,18z/data=!4m2!3m1!1s0x876c78da6f95b189:0x44ec436a8feecb0e"><i class="fa fa-car"></i> Directions and Parking</a>
-        <a href="http://www.amazon.com/gp/registry/registry.html?type=wedding&id=32ZR5EUVU17DT&tag=wedch-994-20"><i class="fa fa-gift"></i> Amazon Registry</a>
-        <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=541848574&pwsurl="><i class="fa fa-gift"></i> Bed, Bath, and Beyond Registry</a>
-      </div>
+      <div class="instruction">Swipe for another picture.</div>
+      <h1><a href="">{{data[0].name}} and {{data[1].name}}</a></h1>
     </footer>
   </body>
 </html>
